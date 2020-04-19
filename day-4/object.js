@@ -34,7 +34,7 @@ let salaries = {
 }
 
 let sum = 0;
-for(key in salaries) {
+for (key in salaries) {
   sum += salaries[key];
 }
 console.log(sum)
@@ -47,8 +47,8 @@ let menu = {
 };
 
 function multiplyNumeric(obj) {
-  for(key in obj) {
-    if (typeof(obj[key])== 'number') {
+  for (key in obj) {
+    if (typeof (obj[key]) == 'number') {
       obj[key] *= 2;
     }
   }
