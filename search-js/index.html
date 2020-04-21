@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <p>Hello World!</p>
-  <script src="./src/index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="search-pallet">
+        <form>
+          <input type="text" id="search" placeholder="Search Here!" />
+        </form>
+        <div class="display-result">
+          <table>
+            <thead>
+              <tr class="titles">
+                <th>Sr. No.</th>
+                <th>Name</th>
+                <th>Gender</th>
+              </tr>
+            </thead>
+            <tbody class="table-body">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="./src/index.js"></script>
+  </body>
 </html>
