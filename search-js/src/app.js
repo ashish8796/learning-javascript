@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         trElem.setAttribute('id', `person-${iD}`);
         let row = myPerson.makeRow();
 
-        if (doNotWorkOnInput) {
+        if (doNotWorkOnInput && endIndex < 1000) {
           if (i === this.lastPerson) {
             // last elment
             let observer = new IntersectionObserver(handleIntersection, {
