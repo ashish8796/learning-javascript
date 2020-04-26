@@ -4,22 +4,22 @@
 
 function decode(r) {
   let num = parseInt(r)
+  testArr = []
+  for (let i = 0; i < 26; i++) {
+    testArr.push(String.fromCharCode(i * num % 26 + 97))
+  }
+  if (Array.from(new Set(testArr)).length !== 26) return "Impossible to decode"
   let index = String(num).length;
   let s = "";
   let strArr = r.slice(index).split('')
-  for(let i of strArr) {
+  for (let i of strArr) {
     let count = 0;
-    while (!(count*num %26 == i.charCodeAt(0)-97)) {
-      console.log(`count:${count}, i:${i.charCodeAt(0)-97}`)
+    while (!(count * num % 26 == i.charCodeAt(0) - 97)) {
       count++;
     }
-    s = s + String.fromCharCode(count+97)
-    // if (count == i.charCodeAt(0)-97 && count != 0 && i.charCodeAt(0)-97 != 0) return "Impossible to decode"
+    s = s + String.fromCharCode(count + 97)
   }
-  console.log(s)
   return s;
 }
-// uogbucwnddunktsjfanzlurnyxmx
-// kuqhkoynvvknsdwljantzkpnmfgf
-decode("105860ymmgegeeiwaigsqkcaeguicc")
-// console.log(result==decode("1273409kuqhkoynvvknsdwljantzkpnmfgf"))
+
+decode("1273409kuqhkoynvvknsdwljantzkpnmfgf")
