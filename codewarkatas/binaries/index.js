@@ -7,11 +7,7 @@ let map = new Map();
 for (let i = 0; i <= 9; i++) {
   let n = Number(i).toString(2);
   let k = n.length;
-  let val = "";
-  for (let i = 0; i < k-1; i++) {
-    val += "0"
-  }
-  val += "1" + n;
+  let val = "0".repeat(k-1)+"1" + n;
 
   map.set(i + '', val)
 }
